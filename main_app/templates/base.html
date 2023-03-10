@@ -49,6 +49,7 @@
             </div>
         </nav>
         <ul class="sidenav" id="mobile-demo">
+            {% if user.is_authenticated %}
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'index' %}">My Tapes</a></li>
             <li><a href="{% url 'tapes_create' %}">Add Tape</a></li>
@@ -62,11 +63,17 @@
                 <a href="{% url 'search_media' %}"><i class="material-icons amber-text accent-3">search</i></a></li> 
                 </form>
             </li>
+            {% else %}
+            <li><a href="{% url 'signup' %}" class="amber-text accent-3">Sign Up</a></li>
+            <li><a href="{% url 'login' %}" class="amber-text accent-3">Log In</a></li>
+            {% endif %}
+                </ul>
         </ul>
         
     </header>
     <main class="container">
         {% block content %}
+        
         {% endblock %}
     </main>
     <footer class="page-footer indigo">
