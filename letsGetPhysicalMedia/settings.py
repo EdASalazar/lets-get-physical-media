@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'letsGetPhysicalMedia.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dvnilsen/letsGetPhysicalMedia',
+        'NAME': 'edasalazar123/physical',
         'USER': os.environ['DB_USER'],
         'PASSWORD': os.environ['DB_PW'],
         'HOST': 'db.bit.io',
