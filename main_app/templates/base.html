@@ -22,48 +22,51 @@
             <div class="nav-wrapper indigo lighten-2">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{% url 'about' %}" class="amber-text accent-3">About</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
                     <!-- other links go here  -->
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'index' %}" class="amber-text accent-3">My Tapes</a></li>
-                        <li><a href="{% url 'tapes_create' %}" class="amber-text accent-3">Add Tape</a></li>
-                        <li><a href="{% url 'logout' %}" class="amber-text accent-3">Log Out</a></li>
+                        <li><a href="{% url 'index' %}">My Tapes</a></li>
+                        <li><a href="{% url 'tapes_create' %}">Add Tape</a></li>
+                        <li><a href="{% url 'logout' %}">Log Out</a></li>
                         <li>
                         <form action="{% url 'search_media' %}" method="POST">
                                 {% csrf_token %}
                                 <input type="search" placeholder="Search" name="searched">
                             </li>
-                            <li><a href="{% url 'search_media' %}"><i class="material-icons amber-text accent-3">search</i></a></li> 
+                            <li><a href="{% url 'search_media' %}"><i class="material-icons">search</i></a></li> 
                         </form>
                         </li>
                     {% else %}
-                    <li><a href="{% url 'signup' %}" class="amber-text accent-3">Sign Up</a></li>
-                    <li><a href="{% url 'login' %}" class="amber-text accent-3">Log In</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                    <li><a href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
-        <ul class="sidenav indigo lighten-3 amber-text" id="mobile-demo">
+        <div class="white-text">
+        <ul class="sidenav indigo lighten-3 white-text" id="mobile-demo">
             {% if user.is_authenticated %}
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'index' %}">My Tapes</a></li>
-            <li><a href="{% url 'tapes_create' %}">Add Tape</a></li>
-            <li><a href="{% url 'logout' %}">Log Out</a></li>
-            <li>
-                <form action="{% url 'search_media' %}" method="POST">
-                {% csrf_token %}
-                <input type="search" placeholder="Search" name="searched">
-            </li>
-            <li>
-                <a href="{% url 'search_media' %}"><i class="material-icons amber-text accent-3">search</i></a></li> 
-                </form>
-            </li>
-            {% else %}
-            <li><a href="{% url 'signup' %}" class="amber-text accent-3">Sign Up</a></li>
-            <li><a href="{% url 'login' %}" class="amber-text accent-3">Log In</a></li>
-            {% endif %}
-                </ul>
-        </ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'index' %}">My Tapes</a></li>
+                <li><a href="{% url 'tapes_create' %}">Add Tape</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <li>
+                    {% csrf_token %}
+                    <form action="{% url 'search_media' %}" method="POST">
+                    <input type="search" placeholder="Search" name="searched">
+                </li>
+                <li>
+                    <a href="{% url 'search_media' %}"><i class="material-icons">search</i></a></li> 
+                    </form>
+                </li>
+                {% else %}
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'login' %}">Log In</a></li>
+                {% endif %}
+            </ul>
+        </div>
         
     </header>
     <main class="container">
