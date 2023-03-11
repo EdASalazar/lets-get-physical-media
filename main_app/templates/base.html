@@ -19,17 +19,12 @@
 <body class="amber lighten-3">
     <header>
         <nav>
-            <div class="nav-wrapper indigo">
+            <div class="nav-wrapper indigo lighten-3">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <!-- <ul class="left hide-on-med-and-down"> -->
-                    <a href="{% url 'home' %}"><img class="img-responsive" style="width: 114px;" src="https://i.imgur.com/Ql5inA8t.jpg" alt="Image"/></a>
-                <!-- </ul> -->
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{% url 'about' %}" class="amber-text accent-3">About</a></li>
                     <!-- other links go here  -->
                     {% if user.is_authenticated %}
-                    <!-- <li><a href="{% url 'movies_index' %}" class="amber-text accent-3">Movies</a></li>
-                        <li><a href="{% url 'movies_create' %}" class="amber-text accent-3">Add Movies</a></li> -->
                         <li><a href="{% url 'index' %}" class="amber-text accent-3">My Tapes</a></li>
                         <li><a href="{% url 'tapes_create' %}" class="amber-text accent-3">Add Tape</a></li>
                         <li><a href="{% url 'logout' %}" class="amber-text accent-3">Log Out</a></li>
@@ -76,7 +71,7 @@
         
         {% endblock %}
     </main>
-    <footer class="page-footer indigo">
+    <footer class="page-footer indigo lighten-3">
         <div class="right amber-text accent-3">All Rights Reserved, &copy; 2023 Let's Get Physical Media &nbsp;</div>
     </footer>
 </body>
