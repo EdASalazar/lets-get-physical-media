@@ -43,8 +43,8 @@
           {% csrf_token %}
           <input type="hidden" class="browser-default" name="searched" value="{{ x.imdbID }}">
           <button class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></button>
-        </div>
         </form>
+      </div>
       <div class="card-content">
         <p>{{ x.Title }} {{ x.Year }} </p>
       </div>
