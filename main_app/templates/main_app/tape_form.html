@@ -42,7 +42,7 @@
         <form action="{% url 'assoc_tape' %}" method="POST">
           {% csrf_token %}
           <input type="hidden" class="browser-default" name="searched" value="{{ x.imdbID }}">
-          <button class="btn-floating halfway-fab waves-effect waves-light red" style="z-index: "><i class="material-icons">add</i></button>
+          <button class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></button>
         </div>
         </form>
       <div class="card-content">
