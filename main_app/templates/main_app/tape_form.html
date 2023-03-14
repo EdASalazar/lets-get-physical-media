@@ -60,10 +60,8 @@
       <form action="{% url 'assoc_tape' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" class="browser-default" name="searched" value="{{ x.imdbID }}">
-        <button class="btn right halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></button>
-      </form>
-        
-        
+        <button class="btn right waves-effect waves-light red"><i class="material-icons">add</i></button>
+      </form>  
   </li>
   {% endfor %}
 </ul>
