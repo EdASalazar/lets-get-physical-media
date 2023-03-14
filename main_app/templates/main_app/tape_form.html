@@ -56,11 +56,11 @@
     {% for x in search_response %}
     <li class="collection-item avatar">
       <img class="circle" src="{{ x.Poster }}">
-      <span class="title">{{ x.Title }} {{ x.Year }}</span>
-      <button class="btn right waves-effect waves-light indigo"><i class="material-icons">add</i></button>
-      <hr>
-      <a href="https://www.imdb.com/title/{{x.imdbID}}">IMDB</a>
       <form action="{% url 'assoc_tape' %}" method="POST">
+      <span class="title">{{ x.Title }}  {{ x.Year }}</span>
+      <br>
+      <button class="btn right waves-effect waves-light indigo"><i class="material-icons">add</i></button>
+      <a href="https://www.imdb.com/title/{{x.imdbID}}">IMDB</a>
         {% csrf_token %}
         <input type="hidden" class="browser-default" name="searched" value="{{ x.imdbID }}">
       </form>  
