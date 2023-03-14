@@ -6,7 +6,7 @@
 <div class="row">
   {% for tape in tapes %}
     <div class="col s12 m6">
-      <div class="card small indigo amber-text">
+      <div class="card small indigo amber-text flow-text">
         <div class="card-image">
           <a href="{% url 'detail' tape.id %}">
           <img class="poster-card" src="{{ tape.movie.poster }}" alt="{{ tape.name }}">
