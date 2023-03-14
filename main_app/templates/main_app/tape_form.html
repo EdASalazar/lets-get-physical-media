@@ -33,7 +33,7 @@
 <!-- above is the search  -->
 {% if searched %}
 
-<div class="row">
+<!-- <div class="row">
   {% for x in search_response %}
   <div class="col s12 m6">
     <div class="card center indigo amber-text">
@@ -50,22 +50,23 @@
       </div>
     </div>
     {% endfor %}
-  </div>
+  </div> -->
   
-  <!-- <ul class="collection">
+  <ul class="collection">
     {% for x in search_response %}
     <li class="collection-item avatar">
       <img class="circle" src="{{ x.Poster }}">
-      <span class="title">{{ x.Title }} </span>
-      <button class="btn right waves-effect waves-light red"><i class="material-icons">add</i></button>
-      <p> {{ x.Year }} </p>
+      <span class="title">{{ x.Title }} {{ x.Year }}</span>
+      <button class="btn right waves-effect waves-light indigo"><i class="material-icons">add</i></button>
+      <hr>
+      <a href="https://www.imdb.com/title/{{x.imdbID}}">IMDB</a>
       <form action="{% url 'assoc_tape' %}" method="POST">
         {% csrf_token %}
         <input type="hidden" class="browser-default" name="searched" value="{{ x.imdbID }}">
       </form>  
   </li>
   {% endfor %}
-</ul> -->
+</ul>
 
 
 
