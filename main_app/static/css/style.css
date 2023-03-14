@@ -35,12 +35,3 @@ h1, h2, h3, h4, a {
   object-fit: cover;
 }
 
-.about-blurbs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.demise {
-  padding-top: 10rem !important;
-}
