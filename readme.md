@@ -8,7 +8,7 @@ As the world continues to move towards streaming and digital movies, collecting 
 
 ## Screenshots
 Welcome Page:
-![Welcome](https://i.imgur.com/u9iLaRd.png "Welcom")
+![Welcome](https://i.imgur.com/u9iLaRd.png "Welcome")
 
 About Page:
 ![About](https://imgur.com/VU9Tzmq.png "Detail")
