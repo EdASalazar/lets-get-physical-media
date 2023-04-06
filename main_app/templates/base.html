@@ -26,7 +26,7 @@
                     <!-- other links go here  -->
                     {% if user.is_authenticated %}
                         <li><a href="{% url 'index' %}">My Tapes</a></li>
-                        <li><a href="{% url 'tapes_create' %}">Add Tape</a></li>
+                        <li><a href="{% url 'tapes_create' %}">Add A Tape</a></li>
                         <li><a href="{% url 'logout' %}">Log Out</a></li>
                         <li>
                         <form action="{% url 'search_media' %}" method="POST">
@@ -49,7 +49,7 @@
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'index' %}">My Tapes</a></li>
-                <li><a href="{% url 'tapes_create' %}">Add Tape</a></li>
+                <li><a href="{% url 'tapes_create' %}">Add A Tape</a></li>
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
                 <li>
                     {% csrf_token %}
