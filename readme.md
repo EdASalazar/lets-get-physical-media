@@ -31,7 +31,7 @@ View your shelf and click on a movie to reveal its details:
 
 ## Getting Started
 Heroku:
-https://lets-get-physical-media.herokuapp.com/ 
+https://letsgetphysical.herokuapp.com/
 
 Trello:
 https://trello.com/b/Pj2Wa1wp/lets-get-physicalmedia 
